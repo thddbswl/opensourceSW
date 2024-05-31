@@ -1,7 +1,7 @@
 # Open Source SW
 리눅스 명령어 top, ps, jobs, kill 명령어에 대해서 알아보자.
 
-top
+*top*
 ---
 시스템 프로세스/메모리 사용현황을 실시간으로 출력하는 명령어
 ![image](https://github.com/thddbswl/opensourceSW/assets/115966686/deb4c41f-f3cc-42b8-863c-96aad39f8466)
@@ -88,7 +88,7 @@ H: 쓰레드 기준으로 출력
 
 -스페이스 바: 즉시 업데이트
 
-**ps**
+*ps*
 ---
 현재 실행 중인 프로세스와 상태를 출력하는 명령
 
@@ -133,7 +133,7 @@ H: 쓰레드 기준으로 출력
 >- x(BSD): 터미널에 종속되지 않은 프로세스 출력
 >- -x: 로그인 상태에 있는 동안 아직 완료되지 않은 프로세스 출력
 
-**jobs**
+*jobs*
 ---
 작업의 상태 표시하는 명령어
 
@@ -162,6 +162,25 @@ jobs [옵션] [작업번호]
 
 -command:지정한 명령어 실핼
 
+*kill*
+---
+프로세스  종료
+
+1. ps 명령어로 PID를 얻고 kill명령어로 프로세스 종료
+`
+kill [PID]
+`
+2. 사용자 지정 시그널 전송 방법으로 종료
+`
+kill -s [signal] [PID]
+`
+-l 옵션을 이용해서 사용 가능한 시그널 목록을 볼 수 있다. 이때 15 시그널에 응답하지 않으면 9를 이용해 강제 종료할 수 있다.
+
+>-l: 시그널 목록 표시
+>-s: 지정한 시그널 보내기
+>-9: SIGKILL 시그널을 보내 강제 종료
+>-15: SIGTERM 시그널을 내 종료
+
 ---
 
 출처
@@ -169,5 +188,7 @@ jobs [옵션] [작업번호]
 [https://code-lab1.tistory.com/332] ([Linux] 리눅스 top 명령어 사용법, 리눅스 CPU 및 메모리 체크하는 법, 코드 연구소:티스토리)
 
 [https://blog.naver.com/PostView.nhn?blogId=tmk0429&logNo=222318530824] (ps 명령어 및 옵션 - 리눅스 프로세스 관리 [Linux 명령어]|작성자 tmk0429)
+
+[https://sisiblog.tistory.com/209] ([Linux] 리눅스 kill 명령어 사용법(프로세스 죽이기), 달삼쓰뱉:티스토리)
 
 [https://hbase.tistory.com/265] ([Linux] 리눅스 jobs 명령어 사용법, A6K 개발노트:티스토리)
