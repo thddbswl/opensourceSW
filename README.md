@@ -1,7 +1,7 @@
 # Open Source SW
 리눅스 명령어 top, ps, jobs, kill 명령어에 대해서 알아보자.
 
-**top**
+top
 ---
 시스템 프로세스/메모리 사용현황을 실시간으로 출력하는 명령어
 ![image](https://github.com/thddbswl/opensourceSW/assets/115966686/deb4c41f-f3cc-42b8-863c-96aad39f8466)
@@ -56,7 +56,7 @@ TIME+ : 프로세스가 사용한 CPU 시간
 COMMAND : 명령어 이름
 
 ---
-**top 명령어를 실행 한 뒤**
+**명령어 출력 항목**
 
 TOP 나가기: q
 
@@ -92,7 +92,7 @@ H: 쓰레드 기준으로 출력
 ---
 현재 실행 중인 프로세스와 상태를 출력하는 명령
 
-**명령어 출력 항목**
+[Linux] 리눅스 top 명령어 사용법
 
 >- USER(BSD): 프로세스 소유자의 이름
 >- UID(System V): 프로세스 소유자의 이름
@@ -141,6 +141,27 @@ H: 쓰레드 기준으로 출력
 jobs [옵션] [작업번호]
 '''
 
+**명령어 출력 상태**
+
+>Running: 작업 진행 중
+>Done: 작업이 완료되어 0을 반환
+>Done(code): 작업이 종료되고 0이 아닌 코드를 반환
+>Stopped: 작업 일시 중단
+>Stopped(SIGTSTP): SIGTSTP 시그널이 작업 일시 중단
+>Stopped(SIGSTOP): SIGSTOP 시그널이 작업 일시 중단
+>Stopped(SIGTTIN): SIGTTIN 시그널이 작업 일시 중단
+>Stopped(SIGTTOU): SIGTTOU 시그널이 작업 일시 중단
+
+**명령어 옵션**
+
+-l: 프로세스 그룹 ID를 stste 앞에 출력
+
+-n: 프로세스 그룹 중 대표 프로세스 ID를 출력
+
+-p: 각 프로세스 ID에 대해 한 행씩 출력
+
+-command:지정한 명령어 실핼
+
 ---
 
 출처
@@ -148,3 +169,5 @@ jobs [옵션] [작업번호]
 [https://code-lab1.tistory.com/332] ([Linux] 리눅스 top 명령어 사용법, 리눅스 CPU 및 메모리 체크하는 법, 코드 연구소:티스토리)
 
 [https://blog.naver.com/PostView.nhn?blogId=tmk0429&logNo=222318530824] (ps 명령어 및 옵션 - 리눅스 프로세스 관리 [Linux 명령어]|작성자 tmk0429)
+
+[https://hbase.tistory.com/265] ([Linux] 리눅스 jobs 명령어 사용법, A6K 개발노트:티스토리)
